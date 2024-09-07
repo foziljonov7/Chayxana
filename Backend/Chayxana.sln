@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chayxana.API", "Chayxana.API\Chayxana.API.csproj", "{39709E80-3B9B-4597-9482-7F98EE395561}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chayxana.BLL", "Chayxana.BLL\Chayxana.BLL.csproj", "{31FE1F14-F6CF-4E70-9445-8DB3B3A414B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chayxana.DAL", "Chayxana.DAL\Chayxana.DAL.csproj", "{B776950B-BD0F-4083-9F90-AA400EF8075B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chayxana.Domain", "Chayxana.Domain\Chayxana.Domain.csproj", "{62476094-FB86-4FA7-BBE5-BF03C5CB2073}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chayxana.Infrastructure", "Chayxana.Infrastructure\Chayxana.Infrastructure.csproj", "{6FDD9651-196B-4025-80DC-8FC8103BE5AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{39709E80-3B9B-4597-9482-7F98EE395561}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39709E80-3B9B-4597-9482-7F98EE395561}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39709E80-3B9B-4597-9482-7F98EE395561}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39709E80-3B9B-4597-9482-7F98EE395561}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31FE1F14-F6CF-4E70-9445-8DB3B3A414B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31FE1F14-F6CF-4E70-9445-8DB3B3A414B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31FE1F14-F6CF-4E70-9445-8DB3B3A414B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31FE1F14-F6CF-4E70-9445-8DB3B3A414B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B776950B-BD0F-4083-9F90-AA400EF8075B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B776950B-BD0F-4083-9F90-AA400EF8075B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B776950B-BD0F-4083-9F90-AA400EF8075B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B776950B-BD0F-4083-9F90-AA400EF8075B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62476094-FB86-4FA7-BBE5-BF03C5CB2073}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62476094-FB86-4FA7-BBE5-BF03C5CB2073}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62476094-FB86-4FA7-BBE5-BF03C5CB2073}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62476094-FB86-4FA7-BBE5-BF03C5CB2073}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FDD9651-196B-4025-80DC-8FC8103BE5AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FDD9651-196B-4025-80DC-8FC8103BE5AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FDD9651-196B-4025-80DC-8FC8103BE5AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FDD9651-196B-4025-80DC-8FC8103BE5AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

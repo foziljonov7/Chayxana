@@ -1,0 +1,6 @@
+@Chayxana.API_HostAddress = http://localhost:5271
+
+GET {{Chayxana.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
