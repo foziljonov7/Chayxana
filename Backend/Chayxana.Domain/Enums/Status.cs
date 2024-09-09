@@ -2,7 +2,7 @@ namespace Chayxana.Domain.Enums;
 
 public enum Status
 {
-    Active,
+    Active = 0,
     Inactive,
     Deleted
 }
