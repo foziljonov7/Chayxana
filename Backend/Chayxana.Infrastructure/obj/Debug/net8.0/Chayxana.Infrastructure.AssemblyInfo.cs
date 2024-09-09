@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Chayxana.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fcddd89f7acf7735cc72726aa30cc2b5c7d7fd0b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6b08bb7f8e9c44c9739744878f98b031b6bcce77")]
 [assembly: System.Reflection.AssemblyProductAttribute("Chayxana.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Chayxana.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
