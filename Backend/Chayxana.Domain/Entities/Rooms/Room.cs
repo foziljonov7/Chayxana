@@ -9,5 +9,7 @@ public class Room : BaseEntity
     public Branch Branch { get; set; }
     public required string Name { get; set; }
     public string Description { get; set; }
+    public double Price { get; set; }
+    public ICollection<Booking> Bookings { get; set; }
     public Status Status { get; set; }
 }

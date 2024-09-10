@@ -26,4 +26,9 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
 
     //Branches DbSet
     public DbSet<Branch> Branches { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
+    }
 }

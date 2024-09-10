@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Chayxana.DAL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3fbdb1173c641c335f8a918dee479b4f0895980c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7bdf995d67092bf6dc7f00b0b77c3c3674df4d64")]
 [assembly: System.Reflection.AssemblyProductAttribute("Chayxana.DAL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Chayxana.DAL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
