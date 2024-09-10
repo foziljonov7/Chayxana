@@ -1,0 +1,12 @@
+D:\dev\Chayxana\Chayxana\Backend\Chayxana.BLL\bin\Debug\net8.0\Chayxana.BLL.deps.json
+D:\dev\Chayxana\Chayxana\Backend\Chayxana.BLL\bin\Debug\net8.0\Chayxana.BLL.dll
+D:\dev\Chayxana\Chayxana\Backend\Chayxana.BLL\bin\Debug\net8.0\Chayxana.BLL.pdb
+D:\dev\Chayxana\Chayxana\Backend\Chayxana.BLL\obj\Debug\net8.0\Chayxana.BLL.GeneratedMSBuildEditorConfig.editorconfig
+D:\dev\Chayxana\Chayxana\Backend\Chayxana.BLL\obj\Debug\net8.0\Chayxana.BLL.AssemblyInfoInputs.cache
+D:\dev\Chayxana\Chayxana\Backend\Chayxana.BLL\obj\Debug\net8.0\Chayxana.BLL.AssemblyInfo.cs
+D:\dev\Chayxana\Chayxana\Backend\Chayxana.BLL\obj\Debug\net8.0\Chayxana.BLL.csproj.CoreCompileInputs.cache
+D:\dev\Chayxana\Chayxana\Backend\Chayxana.BLL\obj\Debug\net8.0\Chayxana.BLL.sourcelink.json
+D:\dev\Chayxana\Chayxana\Backend\Chayxana.BLL\obj\Debug\net8.0\Chayxana.BLL.dll
+D:\dev\Chayxana\Chayxana\Backend\Chayxana.BLL\obj\Debug\net8.0\refint\Chayxana.BLL.dll
+D:\dev\Chayxana\Chayxana\Backend\Chayxana.BLL\obj\Debug\net8.0\Chayxana.BLL.pdb
+D:\dev\Chayxana\Chayxana\Backend\Chayxana.BLL\obj\Debug\net8.0\ref\Chayxana.BLL.dll

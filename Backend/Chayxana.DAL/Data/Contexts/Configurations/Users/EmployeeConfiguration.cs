@@ -19,5 +19,10 @@ public class EmployeeConfiguration : IEntityTypeConfiguration<Employee>
 
         builder.Property(e => e.Address)
             .HasMaxLength(125);
+
+        builder.HasOne(e => e.Branch)
+            .WithMany(b => b.Employees)
+            .HasForeignKey(e => e.BranchId)
+            .IsRequired();
     }
 }

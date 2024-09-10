@@ -12,6 +12,6 @@ public class Branch : BaseEntity
     public DateTime StartDate { get; set; }
     public DateTime EndDate { get; set; }
     public RoomStatus Status { get; set; }
-    public ICollection<User> Users { get; set; }
+    public ICollection<Employee> Employees { get; set; }
     public ICollection<Room> Rooms { get; set; }
 }

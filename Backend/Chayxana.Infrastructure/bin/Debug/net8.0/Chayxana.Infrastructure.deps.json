@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Chayxana.Infrastructure/1.0.0": {
+        "runtime": {
+          "Chayxana.Infrastructure.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Chayxana.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

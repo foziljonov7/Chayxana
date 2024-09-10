@@ -10,6 +10,14 @@ public class RevenueConfiguration : IEntityTypeConfiguration<Revenue>
     {
         builder.ToTable("revenues");
 
-        
+        builder.HasKey(r => r.Id);
+
+        builder.HasOne(r => r.Employee)
+            .WithMany(r => r.Revenues)
+            .HasForeignKey(r => r.EmployeeId)
+            .IsRequired();
+
+        builder.Property(r => r.Amount)
+            .IsRequired();
     }
 }
