@@ -10,3 +10,11 @@ D:\dev\Chayxana\Chayxana\Backend\Chayxana.BLL\obj\Debug\net8.0\Chayxana.BLL.dll
 D:\dev\Chayxana\Chayxana\Backend\Chayxana.BLL\obj\Debug\net8.0\refint\Chayxana.BLL.dll
 D:\dev\Chayxana\Chayxana\Backend\Chayxana.BLL\obj\Debug\net8.0\Chayxana.BLL.pdb
 D:\dev\Chayxana\Chayxana\Backend\Chayxana.BLL\obj\Debug\net8.0\ref\Chayxana.BLL.dll
+D:\dev\Chayxana\Chayxana\Backend\Chayxana.BLL\bin\Debug\net8.0\Chayxana.DAL.dll
+D:\dev\Chayxana\Chayxana\Backend\Chayxana.BLL\bin\Debug\net8.0\Chayxana.Domain.dll
+D:\dev\Chayxana\Chayxana\Backend\Chayxana.BLL\bin\Debug\net8.0\Chayxana.Infrastructure.dll
+D:\dev\Chayxana\Chayxana\Backend\Chayxana.BLL\bin\Debug\net8.0\Chayxana.Domain.pdb
+D:\dev\Chayxana\Chayxana\Backend\Chayxana.BLL\bin\Debug\net8.0\Chayxana.Infrastructure.pdb
+D:\dev\Chayxana\Chayxana\Backend\Chayxana.BLL\bin\Debug\net8.0\Chayxana.DAL.pdb
+D:\dev\Chayxana\Chayxana\Backend\Chayxana.BLL\obj\Debug\net8.0\Chayxana.BLL.csproj.AssemblyReference.cache
+D:\dev\Chayxana\Chayxana\Backend\Chayxana.BLL\obj\Debug\net8.0\Chayxana.A54109CA.Up2Date

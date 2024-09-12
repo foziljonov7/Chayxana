@@ -10,3 +10,9 @@ D:\dev\Chayxana\Chayxana\Backend\Chayxana.Infrastructure\obj\Debug\net8.0\Chayxa
 D:\dev\Chayxana\Chayxana\Backend\Chayxana.Infrastructure\obj\Debug\net8.0\refint\Chayxana.Infrastructure.dll
 D:\dev\Chayxana\Chayxana\Backend\Chayxana.Infrastructure\obj\Debug\net8.0\Chayxana.Infrastructure.pdb
 D:\dev\Chayxana\Chayxana\Backend\Chayxana.Infrastructure\obj\Debug\net8.0\ref\Chayxana.Infrastructure.dll
+D:\dev\Chayxana\Chayxana\Backend\Chayxana.Infrastructure\bin\Debug\net8.0\Chayxana.DAL.dll
+D:\dev\Chayxana\Chayxana\Backend\Chayxana.Infrastructure\bin\Debug\net8.0\Chayxana.Domain.dll
+D:\dev\Chayxana\Chayxana\Backend\Chayxana.Infrastructure\bin\Debug\net8.0\Chayxana.DAL.pdb
+D:\dev\Chayxana\Chayxana\Backend\Chayxana.Infrastructure\bin\Debug\net8.0\Chayxana.Domain.pdb
+D:\dev\Chayxana\Chayxana\Backend\Chayxana.Infrastructure\obj\Debug\net8.0\Chayxana.Infrastructure.csproj.AssemblyReference.cache
+D:\dev\Chayxana\Chayxana\Backend\Chayxana.Infrastructure\obj\Debug\net8.0\Chayxana.58717BD0.Up2Date
