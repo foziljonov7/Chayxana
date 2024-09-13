@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "P0mjujItKBM=",
+  "dgSpecHash": "/pJC+ZKu05Q=",
   "success": true,
   "projectFilePath": "D:\\dev\\Chayxana\\Chayxana\\Backend\\Chayxana.BLL\\Chayxana.BLL.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\abdul\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\abdul\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.8\\microsoft.entityframeworkcore.8.0.8.nupkg.sha512",
     "C:\\Users\\abdul\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.8\\microsoft.entityframeworkcore.abstractions.8.0.8.nupkg.sha512",
     "C:\\Users\\abdul\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\8.0.8\\microsoft.entityframeworkcore.analyzers.8.0.8.nupkg.sha512",
