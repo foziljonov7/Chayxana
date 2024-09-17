@@ -11,7 +11,7 @@ public class Branch : BaseEntity
     public required string PhoneNumber { get; set; }
     public DateTime StartDate { get; set; }
     public DateTime EndDate { get; set; }
-    public RoomStatus Status { get; set; }
+    public Status Status { get; set; }
     public ICollection<Employee> Employees { get; set; }
     public ICollection<Room> Rooms { get; set; }
 }
