@@ -12,5 +12,5 @@ public class AddEmployeeDTO
     [JsonPropertyName("daily_wage")]
     public double DailyWage { get; set; }
     [JsonPropertyName("branch_id")]
-    public  long BranchId { get; set; }
+    public long BranchId { get; set; }
 }
