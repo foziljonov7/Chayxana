@@ -52,7 +52,7 @@ public class RevenueService(
         return mapper.Map<RevenueDTO>(revenue);
     }
 
-    public async Task<bool> WithHoldingOfRevenueAsync(long revenueId, double amount, DateTime date, CancellationToken cancellationToken = default)
+    public async Task<bool> WithHoldingOfRevenueAsync(long revenueId, double amount, CancellationToken cancellationToken = default)
     {
         var revenue = await repository.SelectAsync(x => x.Id == revenueId, null, cancellationToken);
         if(revenue is null)
