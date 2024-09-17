@@ -16,6 +16,6 @@ public class EmployeeDTO
     public double DailyWage { get; set; }
     [JsonPropertyName("branch_id")]
     public  long BranchId { get; set; }
-    // [JsonPropertyName("revenues")]  //RevenueDTO
-    // public ICollection<Revenue> Revenues { get; set; }
+    [JsonPropertyName("revenues")]  //RevenueDTO
+    public ICollection<RevenueDTO> Revenues { get; set; }
 }
