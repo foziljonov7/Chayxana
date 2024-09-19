@@ -2791,11 +2791,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\dev\\Chayxana\\Chayxana\\Backend\\Chayxana.API\\Chayxana.API.csproj",
+      "projectUniqueName": "D:\\dev\\Chayxana\\Backend\\Chayxana.API\\Chayxana.API.csproj",
       "projectName": "Chayxana.API",
-      "projectPath": "D:\\dev\\Chayxana\\Chayxana\\Backend\\Chayxana.API\\Chayxana.API.csproj",
+      "projectPath": "D:\\dev\\Chayxana\\Backend\\Chayxana.API\\Chayxana.API.csproj",
       "packagesPath": "C:\\Users\\abdul\\.nuget\\packages\\",
-      "outputPath": "D:\\dev\\Chayxana\\Chayxana\\Backend\\Chayxana.API\\obj\\",
+      "outputPath": "D:\\dev\\Chayxana\\Backend\\Chayxana.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2817,8 +2817,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\dev\\Chayxana\\Chayxana\\Backend\\Chayxana.DAL\\Chayxana.DAL.csproj": {
-              "projectPath": "D:\\dev\\Chayxana\\Chayxana\\Backend\\Chayxana.DAL\\Chayxana.DAL.csproj"
+            "D:\\dev\\Chayxana\\Backend\\Chayxana.DAL\\Chayxana.DAL.csproj": {
+              "projectPath": "D:\\dev\\Chayxana\\Backend\\Chayxana.DAL\\Chayxana.DAL.csproj"
             }
           }
         }
