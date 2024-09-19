@@ -1042,11 +1042,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\dev\\Chayxana\\Chayxana\\Backend\\Chayxana.BLL\\Chayxana.BLL.csproj",
+      "projectUniqueName": "D:\\dev\\Chayxana\\Backend\\Chayxana.BLL\\Chayxana.BLL.csproj",
       "projectName": "Chayxana.BLL",
-      "projectPath": "D:\\dev\\Chayxana\\Chayxana\\Backend\\Chayxana.BLL\\Chayxana.BLL.csproj",
+      "projectPath": "D:\\dev\\Chayxana\\Backend\\Chayxana.BLL\\Chayxana.BLL.csproj",
       "packagesPath": "C:\\Users\\abdul\\.nuget\\packages\\",
-      "outputPath": "D:\\dev\\Chayxana\\Chayxana\\Backend\\Chayxana.BLL\\obj\\",
+      "outputPath": "D:\\dev\\Chayxana\\Backend\\Chayxana.BLL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1068,11 +1068,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\dev\\Chayxana\\Chayxana\\Backend\\Chayxana.Domain\\Chayxana.Domain.csproj": {
-              "projectPath": "D:\\dev\\Chayxana\\Chayxana\\Backend\\Chayxana.Domain\\Chayxana.Domain.csproj"
+            "D:\\dev\\Chayxana\\Backend\\Chayxana.Domain\\Chayxana.Domain.csproj": {
+              "projectPath": "D:\\dev\\Chayxana\\Backend\\Chayxana.Domain\\Chayxana.Domain.csproj"
             },
-            "D:\\dev\\Chayxana\\Chayxana\\Backend\\Chayxana.Infrastructure\\Chayxana.Infrastructure.csproj": {
-              "projectPath": "D:\\dev\\Chayxana\\Chayxana\\Backend\\Chayxana.Infrastructure\\Chayxana.Infrastructure.csproj"
+            "D:\\dev\\Chayxana\\Backend\\Chayxana.Infrastructure\\Chayxana.Infrastructure.csproj": {
+              "projectPath": "D:\\dev\\Chayxana\\Backend\\Chayxana.Infrastructure\\Chayxana.Infrastructure.csproj"
             }
           }
         }
