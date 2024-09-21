@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Chayxana.BLL
-build_property.ProjectDir = d:\dev\Chayxana\Backend\Chayxana.BLL\
+build_property.ProjectDir = D:\dev\Chayxana\Backend\Chayxana.BLL\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

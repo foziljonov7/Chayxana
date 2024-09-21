@@ -4,6 +4,7 @@ using Chayxana.BLL.DTOs.UserDTOs;
 using Chayxana.BLL.Helpers;
 using Chayxana.BLL.Interfaces.Users;
 using Chayxana.Domain.Entities.Users;
+using Chayxana.Domain.Enums;
 using Chayxana.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -46,7 +47,7 @@ public class UserService(
 
     public async Task<IEnumerable<UserDTO>> RetrieveAllUsersAsync(CancellationToken cancellationToken = default)
     {
-        var userQuery = await repository.SelectAllAsync(null, null, cancellationToken);
+        var userQuery = await repository.SelectAllAsync(x => x.Status == Status.Active, null, cancellationToken);
 
         var users = await userQuery
             .AsNoTracking()
@@ -71,6 +72,7 @@ public class UserService(
     public async Task<UserDTO> UpdateUserAsync(long id, ModifyDTO dto, CancellationToken cancellationToken = default)
     {
         var user = await repository.SelectAsync(x => x.Id == id);
+
         if(user is null)
             throw new CustomException(404, "User does not exist");
 
