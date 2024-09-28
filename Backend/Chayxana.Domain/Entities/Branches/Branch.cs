@@ -14,4 +14,5 @@ public class Branch : BaseEntity
     public Status Status { get; set; }
     public ICollection<Employee> Employees { get; set; }
     public ICollection<Room> Rooms { get; set; }
+    public ICollection<BranchFeedback> Feedbacks { get; set; }
 }
