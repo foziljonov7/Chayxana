@@ -10,6 +10,7 @@ public class Room : BaseEntity
     public required string Name { get; set; }
     public string Description { get; set; }
     public double Price { get; set; }
+    public int Capacity { get; set; }
     public ICollection<Booking> Bookings { get; set; }
     public ICollection<RoomFeedback> Feedbacks { get; set; }
     public Status Status { get; set; }

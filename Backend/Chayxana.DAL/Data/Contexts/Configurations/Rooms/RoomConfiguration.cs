@@ -27,5 +27,13 @@ public class RoomConfiguration : IEntityTypeConfiguration<Room>
             .WithMany(b => b.Rooms)
             .HasForeignKey(r => r.BranchId)
             .IsRequired();
+
+        builder.HasMany(r => r.Feedbacks)
+            .WithOne(f => f.Room)
+            .HasForeignKey(f => f.RoomId);
+
+        builder.HasMany(r => r.Bookings)
+            .WithOne(b => b.Room)
+            .HasForeignKey(b => b.RoomId);
     }
 }
