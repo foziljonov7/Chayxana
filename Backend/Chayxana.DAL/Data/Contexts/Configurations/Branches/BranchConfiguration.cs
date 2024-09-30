@@ -20,6 +20,10 @@ public class BranchConfiguration : IEntityTypeConfiguration<Branch>
             .HasMaxLength(255)
             .IsRequired();
 
+        builder.Property(b => b.Password)
+            .HasMaxLength(8)
+            .IsRequired();
+
         builder.HasIndex(b => b.PhoneNumber)
             .IsUnique();
 
@@ -30,5 +34,9 @@ public class BranchConfiguration : IEntityTypeConfiguration<Branch>
         builder.HasMany(b => b.Employees)
             .WithOne(e => e.Branch)
             .HasForeignKey(e => e.BranchId);
+
+        builder.HasMany(b => b.Feedbacks)
+            .WithOne(f => f.Branch)
+            .HasForeignKey(f => f.BranchId);
     }
 }

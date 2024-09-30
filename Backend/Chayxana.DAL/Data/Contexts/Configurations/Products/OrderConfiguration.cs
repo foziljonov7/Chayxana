@@ -18,5 +18,8 @@ public class OrderConfiguration : IEntityTypeConfiguration<Order>
         builder.HasMany(o => o.Items)
             .WithOne(oi => oi.Order)
             .HasForeignKey(oi => oi.OrderId);
+
+        builder.Property(o => o.BookingId)
+            .IsRequired();
     }
 }
