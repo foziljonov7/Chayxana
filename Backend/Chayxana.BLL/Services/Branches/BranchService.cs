@@ -2,6 +2,7 @@
 using Chayxana.BLL.Commons;
 using Chayxana.BLL.DTOs.BranchDTOs;
 using Chayxana.BLL.DTOs.UserDTOs;
+using Chayxana.BLL.Helpers;
 using Chayxana.BLL.Interfaces.Branches;
 using Chayxana.Domain.Entities.Branches;
 using Chayxana.Domain.Enums;
@@ -18,7 +19,18 @@ public class BranchService(
     {
         try
         {
+            var branchResult = await repository.SelectAsync(x => x.PhoneNumber == newBranch.PhoneNumber);
+
+            if (branchResult != null)
+                throw new CustomException(404, "Branch is already exists.");
+
+            var hasher = PasswordHelper.Hash(newBranch.Password);
             var mapped = mapper.Map<Branch>(newBranch);
+
+            mapped.CreatedAt = DateTime.UtcNow.AddHours(5);
+            //mapped.Salt = hasher.salt;
+            mapped.Password = hasher.hash;
+
             await repository.AddAsync(mapped, cancellationToken);
             await repository.SaveAsync(cancellationToken);
             mapped.CreatedAt = DateTime.UtcNow;

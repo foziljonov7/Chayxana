@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Chayxana.BLL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+34694f2b2b2ef426d07fb37d84ec6d7ec8b0e616")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+81c341988bbd9c41f64d9ed09b63b9e41c0a55d1")]
 [assembly: System.Reflection.AssemblyProductAttribute("Chayxana.BLL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Chayxana.BLL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
