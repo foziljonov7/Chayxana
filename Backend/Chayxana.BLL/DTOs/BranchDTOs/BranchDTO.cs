@@ -16,7 +16,7 @@ public class BranchDTO
     [JsonPropertyName("phone_number")]
     public string PhoneNumber { get; set; }
     [JsonPropertyName("password")]
-    public string Pasword { get; set; }
+    public string Password { get; set; }
     [JsonPropertyName("start_date")]
     public DateTime StartDate { get; set; }
     [JsonPropertyName("end_date")]

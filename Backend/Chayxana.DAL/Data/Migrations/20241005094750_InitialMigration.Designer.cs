@@ -9,11 +9,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
-namespace Chayxana.DAL.Data.Migraitons
+namespace Chayxana.DAL.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240930190835_SecondMigration")]
-    partial class SecondMigration
+    [Migration("20241005094750_InitialMigration")]
+    partial class InitialMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -55,6 +55,9 @@ namespace Chayxana.DAL.Data.Migraitons
                         .HasColumnType("character varying(8)");
 
                     b.Property<string>("PhoneNumber")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Salt")
                         .HasColumnType("text");
 
                     b.Property<DateTime>("StartDate")

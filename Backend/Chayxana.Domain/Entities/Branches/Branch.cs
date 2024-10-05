@@ -10,6 +10,7 @@ public class Branch : BaseEntity
     public required string Address { get; set; }
     public required string PhoneNumber { get; set; }
     public required string Password { get; set; }
+    public string Salt { get; set; }
     public DateTime StartDate { get; set; }
     public DateTime EndDate { get; set; }
     public Status Status { get; set; }

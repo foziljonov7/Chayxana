@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Chayxana.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+035ac817ef92a7a2da3ef199840ba24da22fd264")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+833bd133d439316c63e4268adf4ed73f47133be4")]
 [assembly: System.Reflection.AssemblyProductAttribute("Chayxana.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Chayxana.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -7,7 +7,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Chayxana.DAL.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class FirstMigration : Migration
+    public partial class InitialMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -21,32 +21,18 @@ namespace Chayxana.DAL.Data.Migrations
                     Name = table.Column<string>(type: "character varying(120)", maxLength: 120, nullable: false),
                     Address = table.Column<string>(type: "character varying(255)", maxLength: 255, nullable: false),
                     PhoneNumber = table.Column<string>(type: "text", nullable: true),
+                    Password = table.Column<string>(type: "character varying(8)", maxLength: 8, nullable: false),
+                    Salt = table.Column<string>(type: "text", nullable: true),
                     StartDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     EndDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     Status = table.Column<int>(type: "integer", nullable: false),
+                    Type = table.Column<int>(type: "integer", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_branches", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "orders",
-                columns: table => new
-                {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    RoomId = table.Column<long>(type: "bigint", nullable: false),
-                    OrderDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    TotalAmount = table.Column<double>(type: "double precision", nullable: false),
-                    CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_orders", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -111,6 +97,7 @@ namespace Chayxana.DAL.Data.Migrations
                     Name = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
                     Description = table.Column<string>(type: "character varying(500)", maxLength: 500, nullable: true),
                     Price = table.Column<double>(type: "double precision", nullable: false),
+                    Capacity = table.Column<int>(type: "integer", nullable: false),
                     Status = table.Column<int>(type: "integer", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
@@ -127,32 +114,31 @@ namespace Chayxana.DAL.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "order_items",
+                name: "BranchFeedback",
                 columns: table => new
                 {
                     Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    OrderId = table.Column<long>(type: "bigint", nullable: false),
-                    ProductId = table.Column<long>(type: "bigint", nullable: false),
-                    Quantity = table.Column<int>(type: "integer", nullable: false),
-                    UnitPrice = table.Column<double>(type: "double precision", nullable: false),
-                    TotalAmount = table.Column<double>(type: "double precision", nullable: false),
+                    BranchId = table.Column<long>(type: "bigint", nullable: false),
+                    UserId = table.Column<long>(type: "bigint", nullable: false),
+                    Comment = table.Column<string>(type: "text", nullable: true),
+                    Rating = table.Column<int>(type: "integer", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_order_items", x => x.Id);
+                    table.PrimaryKey("PK_BranchFeedback", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_order_items_orders_OrderId",
-                        column: x => x.OrderId,
-                        principalTable: "orders",
+                        name: "FK_BranchFeedback_branches_BranchId",
+                        column: x => x.BranchId,
+                        principalTable: "branches",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_order_items_products_ProductId",
-                        column: x => x.ProductId,
-                        principalTable: "products",
+                        name: "FK_BranchFeedback_users_UserId",
+                        column: x => x.UserId,
+                        principalTable: "users",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -236,6 +222,36 @@ namespace Chayxana.DAL.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "RoomFeedback",
+                columns: table => new
+                {
+                    Id = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    RoomId = table.Column<long>(type: "bigint", nullable: false),
+                    UserId = table.Column<long>(type: "bigint", nullable: false),
+                    Comment = table.Column<string>(type: "text", nullable: true),
+                    Rating = table.Column<int>(type: "integer", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_RoomFeedback", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_RoomFeedback_rooms_RoomId",
+                        column: x => x.RoomId,
+                        principalTable: "rooms",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_RoomFeedback_users_UserId",
+                        column: x => x.UserId,
+                        principalTable: "users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "revenues",
                 columns: table => new
                 {
@@ -258,6 +274,60 @@ namespace Chayxana.DAL.Data.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "orders",
+                columns: table => new
+                {
+                    Id = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    OrderDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    TotalAmount = table.Column<double>(type: "double precision", nullable: false),
+                    BookingId = table.Column<long>(type: "bigint", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_orders", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_orders_bookings_BookingId",
+                        column: x => x.BookingId,
+                        principalTable: "bookings",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "order_items",
+                columns: table => new
+                {
+                    Id = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    OrderId = table.Column<long>(type: "bigint", nullable: false),
+                    ProductId = table.Column<long>(type: "bigint", nullable: false),
+                    Quantity = table.Column<int>(type: "integer", nullable: false),
+                    UnitPrice = table.Column<double>(type: "double precision", nullable: false),
+                    TotalAmount = table.Column<double>(type: "double precision", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_order_items", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_order_items_orders_OrderId",
+                        column: x => x.OrderId,
+                        principalTable: "orders",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_order_items_products_ProductId",
+                        column: x => x.ProductId,
+                        principalTable: "products",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_bookings_RoomId",
                 table: "bookings",
@@ -268,6 +338,16 @@ namespace Chayxana.DAL.Data.Migrations
                 table: "branches",
                 column: "PhoneNumber",
                 unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_BranchFeedback_BranchId",
+                table: "BranchFeedback",
+                column: "BranchId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_BranchFeedback_UserId",
+                table: "BranchFeedback",
+                column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_employees_BranchId",
@@ -290,9 +370,24 @@ namespace Chayxana.DAL.Data.Migrations
                 column: "ProductId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_orders_BookingId",
+                table: "orders",
+                column: "BookingId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_revenues_EmployeeId",
                 table: "revenues",
                 column: "EmployeeId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_RoomFeedback_RoomId",
+                table: "RoomFeedback",
+                column: "RoomId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_RoomFeedback_UserId",
+                table: "RoomFeedback",
+                column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_rooms_BranchId",
@@ -315,7 +410,7 @@ namespace Chayxana.DAL.Data.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "bookings");
+                name: "BranchFeedback");
 
             migrationBuilder.DropTable(
                 name: "order_items");
@@ -324,10 +419,10 @@ namespace Chayxana.DAL.Data.Migrations
                 name: "revenues");
 
             migrationBuilder.DropTable(
-                name: "user_roles");
+                name: "RoomFeedback");
 
             migrationBuilder.DropTable(
-                name: "rooms");
+                name: "user_roles");
 
             migrationBuilder.DropTable(
                 name: "orders");
@@ -342,10 +437,16 @@ namespace Chayxana.DAL.Data.Migrations
                 name: "Roles");
 
             migrationBuilder.DropTable(
-                name: "branches");
+                name: "bookings");
 
             migrationBuilder.DropTable(
                 name: "users");
+
+            migrationBuilder.DropTable(
+                name: "rooms");
+
+            migrationBuilder.DropTable(
+                name: "branches");
         }
     }
 }
