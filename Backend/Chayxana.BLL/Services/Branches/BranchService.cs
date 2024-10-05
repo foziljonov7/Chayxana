@@ -13,6 +13,7 @@ namespace Chayxana.BLL.Services.Branches;
 
 public class BranchService(
     IRepository<Branch> repository,
+    BranchAuthService service,
     IMapper mapper) : IBranchService
 {
     public async Task<BranchDTO> AddBranchAsync(AddBranchDTO newBranch, CancellationToken cancellationToken = default)
@@ -28,7 +29,7 @@ public class BranchService(
             var mapped = mapper.Map<Branch>(newBranch);
 
             mapped.CreatedAt = DateTime.UtcNow.AddHours(5);
-            //mapped.Salt = hasher.salt;
+            mapped.Salt = hasher.salt;
             mapped.Password = hasher.hash;
 
             await repository.AddAsync(mapped, cancellationToken);
@@ -41,6 +42,20 @@ public class BranchService(
         {
             throw new CustomException(404, "Branch not found.");
         }
+    }
+
+    public async Task<string> LoginBranchAsync(LoginBranchDTO login, CancellationToken cancellation = default)
+    {
+        var branch = await repository.SelectAsync(x => x.PhoneNumber == login.PhoneNumber);
+
+        if (branch is null)
+            throw new CustomException(404, "Password or Phone number wrong!");
+
+        var hasherResult = PasswordHelper.Verify(login.Password, branch.Salt, branch.Password);
+        if (!hasherResult)
+            throw new CustomException(401, "Password wrong");
+
+        return service.GetGenerateToken(branch);
     }
 
     public async Task<BranchDTO> ModifyBranchAsync(long id, ModifyBranchDTO branch, CancellationToken cancellationToken = default)

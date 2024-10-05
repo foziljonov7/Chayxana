@@ -19,7 +19,7 @@ public class AccountService(
         
         var hasherResult = PasswordHelper.Verify(login.Password, user.Salt, user.Password);
         if(!hasherResult)
-            throw new CustomException(401, "PhoneNumber or Password wrong!");
+            throw new CustomException(401, "Password wrong!");
 
         return service.GenerateToken(user);
     }

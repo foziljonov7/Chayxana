@@ -7,6 +7,7 @@ public interface IBranchService
 {
     Task<IEnumerable<BranchDTO>> RetrieveAllBranchesAsync(CancellationToken cancellationToken = default);
     Task<BranchDTO> RetrieveBranchAsync(long id, CancellationToken cancellationToken = default);
+    Task<string> LoginBranchAsync(LoginBranchDTO login, CancellationToken cancellation = default);
     Task<BranchDTO> AddBranchAsync(AddBranchDTO newBranch, CancellationToken cancellationToken = default);
     Task<bool> RemoveBranchAsync(long id, CancellationToken cancellationToken = default);
     Task<BranchDTO> ModifyBranchAsync(long id, ModifyBranchDTO branch, CancellationToken cancellationToken = default);
